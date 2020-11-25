@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+// If can not access this go server via browser, before move forward, check firewalld rather than iptables
 func main() {
 	http.HandleFunc("/", index)
 	err := http.ListenAndServe(":8089", nil)
